@@ -11,12 +11,12 @@ load_dotenv()
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
-description = "Music Bot for querying audio from YouTube"
+description = "Music Bot for querying audio from YouTube. AM$help for command list"
 bot_name = ""
 queue = []
 paused = False
 
-bot = commands.Bot(command_prefix='$', description=description, help_command=None, intents=intents)
+bot = commands.Bot(command_prefix='AM$', description=description, help_command=None, intents=intents)
 
 
 @bot.event
