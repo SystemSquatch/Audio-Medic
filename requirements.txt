@@ -1,0 +1,5 @@
+py-cord[voice]
+discord
+youtube-dl
+python-dotenv
+youtube-search-python
