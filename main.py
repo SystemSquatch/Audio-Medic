@@ -51,6 +51,9 @@ async def leave(ctx):
     voice_client = ctx.message.guild.voice_client
     if voice_client is not None and voice_client.is_connected():
         await voice_client.disconnect()
+        global paused
+        paused = False
+        queue.clear()
     else:
         await ctx.send(bot_name + " is not connected to a voice channel.")
 
@@ -163,7 +166,7 @@ async def start_queue_check(ctx, voice_client):
             if len(queue) == 0:
                 break
         else:
-            print(bot_name + " finished playing")
+            print(bot_name + " not finished playing. Queue:")
             print(queue)
             await asyncio.sleep(5)
 
