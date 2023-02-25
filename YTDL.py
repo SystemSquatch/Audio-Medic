@@ -1,9 +1,9 @@
 import asyncio
 
 import discord
-import yt_dlp
+import youtube_dl
 
-yt_dlp.utils.bug_reports_message = lambda: ''
+youtube_dl.utils.bug_reports_message = lambda: ''
 
 ytdl_format_options = {
     'format': 'bestaudio/best',
@@ -22,7 +22,7 @@ ffmpeg_options = {
     'options': '-vn'
 }
 
-ytdl = yt_dlp.YoutubeDL(ytdl_format_options)
+ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
 
 class YTDLSource(discord.PCMVolumeTransformer):
