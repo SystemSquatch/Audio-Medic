@@ -171,4 +171,4 @@ async def start_queue_check(ctx, voice_client):
             await asyncio.sleep(5)
 
 
-bot.run('MTA3MTk4Mzc0MzIwMTQ2NDQxMg.GP1yIW.1oZweC_XiS3cWeeOoU65YbU1wQmRn3wgfCLmf8')
+bot.run('bot token')
